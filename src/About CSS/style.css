@@ -1,0 +1,574 @@
+/********** Template CSS **********/
+:root {
+    --primary: #6222CC;
+    --secondary: #FBA504;
+    --light: #F6F4F9;
+    --dark: #04000B;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.Soft-box{
+    text-align: center;
+}
+
+.about-icon{
+    height:250px;
+}
+
+.about-head{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.about-para{
+    font-size: 19px;
+}
+
+/*** Section Title ***/
+.section-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.section-title span:first-child,
+.section-title span:last-child {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    width: 30px;
+    height: 2px;
+}
+
+.section-title span:last-child {
+    margin-right: 0;
+    margin-left: 30px;
+}
+
+.section-title span:first-child::after,
+.section-title span:last-child::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 2px;
+    top: 0;
+    right: -20px;
+}
+
+.section-title span:last-child::after {
+    right: auto;
+    left: -20px;
+}
+
+.section-title.text-primary span:first-child,
+.section-title.text-primary span:last-child,
+.section-title.text-primary span:first-child::after,
+.section-title.text-primary span:last-child::after {
+    background: var(--primary);
+}
+
+.section-title.text-secondary span:first-child,
+.section-title.text-secondary span:last-child,
+.section-title.text-secondary span:first-child::after,
+.section-title.text-secondary span:last-child::after {
+    background: var(--secondary);
+}
+
+.section-title.text-white span:first-child,
+.section-title.text-white span:last-child,
+.section-title.text-white span:first-child::after,
+.section-title.text-white span:last-child::after {
+    background: #FFFFFF;
+}
+
+
+/*** Feature ***/
+.feature-item {
+    transition: .5s;
+}
+
+.feature-item:hover {
+    margin-top: -15px;
+}
+
+
+/*** About ***/
+.progress {
+    height: 5px;
+}
+
+.progress .progress-bar {
+    width: 0px;
+    transition: 3s;
+}
+
+
+/*** Fact ***/
+.fact {
+    margin: 6rem 16rem;
+    border-radius: 19px;
+    width: 70%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(45deg, #f58686, #69d6db);
+}
+.container .row{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+@media (min-width:1200px){
+    .fact .container .row{
+        width: 63vw;
+    }
+    .col-lg-333{
+        width: 48%;
+    }
+}
+@media (min-width:995px){
+    .fact .container .row{
+        min-width: 33vw;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+@media (max-width:690px){
+    .fact{
+        margin: 6rem 9rem;
+        border-radius: 19px;
+    }
+}
+
+@media (max-width:690px){
+    .fact{
+        margin: 6rem 7rem;
+        border-radius: 19px;
+    }
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    padding: 45px 30px;
+    background: var(--light);
+    overflow: hidden;
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -15px;
+    padding-bottom: 60px;
+    background: var(--primary);
+}
+
+.service-item .service-icon {
+    margin: 0 auto 20px auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    background: url(../img/hack11.jpg) center center no-repeat;
+    background-size: contain;
+    transition: .5s;
+}
+
+.service-item:hover .service-icon {
+    color: var(--dark);
+    background: url(../img/hack10.jpg) center center no-repeat;
+    background-size: contain;
+}
+
+.service-item h5,
+.service-item p {
+    transition: .5s;
+}
+
+.service-item:hover h5,
+.service-item:hover p {
+    color: #FFFFFF;
+}
+
+.service-item a.btn {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary);
+    background: #FFFFFF;
+    border-radius: 40px 40px 0 0;
+    transition: .5s;
+    z-index: 1;
+}
+
+.service-item a.btn:hover {
+    color: var(--dark);
+    background: var(--secondary);
+}
+
+.service-item:hover a.btn {
+    bottom: 0;
+}
+
+
+/*** Project Portfolio ***/
+#portfolio-flters li {
+    display: inline-block;
+    font-weight: 500;
+    color: var(--dark);
+    cursor: pointer;
+    transition: .5s;
+    border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.portfolio-item img {
+    transition: .5s;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-item .portfolio-overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(98, 34, 204, .9);
+    transition: .5s;
+    opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+
+/*** Newsletter ***/
+.newsletter {
+    margin: 6rem 0;
+    background:
+        url(../img/hack10.jpg),
+        url(../img/hack6.jpg),
+        url(../img/hack7.jpg),
+        url(../img/hack8.jpg),
+        url(../img/hack9.jpg);
+    background-position:
+        left 0px top 0px,
+        right 0px top 0px,
+        left 0px bottom 0px,
+        right 0px bottom 0px,
+        center center;
+    background-repeat: no-repeat;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .testimonial-item {
+    padding: 0 30px 30px 30px;
+}
+
+.testimonial-carousel .owl-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-nav .owl-prev,
+.testimonial-carousel .owl-nav .owl-next {
+    margin: 0 12px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    background: var(--light);
+    border-radius: 60px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-nav .owl-prev:hover,
+.testimonial-carousel .owl-nav .owl-next:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+
+/*** Team ***/
+.team-item .btn {
+    color: var(--primary);
+    background: #FFFFFF;
+}
+
+.team-item .btn:hover {
+    color: #FFFFFF;
+    background: var(--primary);
+}
+
+
+
+.container h5{
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.container i{
+    font-size: 48px;
+    font-weight: 900;
+    color: #FCBA50;
+}
+
+.container p{
+    font-size: 17px;
+}
+
+.col-xl-3{
+  height: 155px;
+  padding: 0;
+  width: 167px;
+  border-radius: 11px;
+}
+
+.row .bg-white{
+    width: auto;
+    height: 155px;
+    margin: 0 0% 0 0;
+    border-radius: 34px;
+}
+
+@media (max-width:730px){
+    .col-xl-31{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+    .img-fluids1{
+        width: auto;
+        height: 127px;
+        margin: 6px 0 0 0;
+    }
+
+    .col-xl-32{
+        height: 128px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+}
+    .img-fluids2{
+        width: auto;
+        height: 115px;
+        margin: 12px 0 0 3%;
+    }
+    .col-xl-34{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+
+    }
+    .img-fluids4{
+        width: auto;
+        height: 98px;
+        margin: 18% 4% 0px 9px;
+    }
+    .col-xl-35{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+        }
+    .img-fluids5{
+        width: auto;
+        height: 138px;
+        margin: 0% 0% 0px 0px;
+    }
+    .col-xl-36{
+        height: 133px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+}
+    .img-fluids6{
+        width: auto;
+        height: 113px;
+        margin: 5% 0% 0px 0px;
+    }
+    .col-xl-37{
+        height: 135px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+}
+    .img-fluids7{
+        width: auto;
+        height: 116px;
+        margin: 10% 32px 0px 12%;
+    }
+    .col-xl-39{
+        height: 138px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+}
+    .img-fluids9{
+        width: auto;
+        height: 110px;
+        margin: 23% 0px 0px 12%;
+    }
+    .col-xl-40{
+        height: 136px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+    .img-fluids40{
+        width: auto;
+        height: 108px;
+        margin: 24% 0px 0px 5%;
+    }
+
+}
+@media (min-width:731px){
+    .col-xl-31{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+    .img-fluids1{
+        width: auto;
+        height: 127px;
+        margin: 6px 0 0 0;
+    }
+
+    .col-xl-32{
+        height: 128px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+
+    }
+
+    .img-fluids2{
+        width: auto;
+        height: 115px;
+        margin: 12px 0 0 3%;
+    }
+    .col-xl-34{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids4{
+        width: auto;
+        height: 98px;
+        margin: 18% 4% 0px 9px;
+    }
+    .col-xl-35{
+        height: 129px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids5{
+        width: auto;
+        height: 138px;
+        margin: 0% 0% 0px 0px;
+    }
+    .col-xl-36{
+        height: 133px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids6{
+        width: auto;
+        height: 113px;
+        margin: 5% 0% 0px 0px;
+    }
+    .col-xl-37{
+        height: 135px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids7{
+        width: auto;
+        height: 116px;
+        margin: 10% 32px 0px 12%;
+    }
+    .col-xl-39{
+        height: 138px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids9{
+        width: auto;
+        height: 110px;
+        margin: 23% 0px 0px 12%;
+    }
+    .col-xl-40{
+        height: 136px;
+        padding: 0;
+        width: auto;
+        border-radius: 2px;
+    }
+
+    .img-fluids40{
+        width: auto;
+        height: 108px;
+        margin: 24% 0px 0px 5%;
+    }
+}
