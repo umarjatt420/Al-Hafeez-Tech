@@ -48,7 +48,7 @@ export default function Services(props){
 			              </div>
 			              <div class="card-body">
 			                <h5 class="card-title"><a href="#">Web Development</a></h5>
-			                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+			                <p class="card-text">Hoist your online nearness with our state-of-the-art web advancement administrations. Our specialists make energetic, user-friendly websites that consistently speak to your brand, guaranteeing captivating client involvement.</p>
 			              </div>
 			            </div>
 			          </div>
@@ -59,7 +59,7 @@ export default function Services(props){
 			              </div>
 			              <div class="card-body">
 			                <h5 class="card-title"><a href="#">Graphic Designing</a></h5>
-			                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
+			                <p class="card-text">Make a lasting visual impact with our captivating graphic designs. Our skilled designers create stunning visuals that capture your brand's essence, enhancing your marketing collateral and leaving a lasting impression.</p>
 			              </div>
 			            </div>
 
